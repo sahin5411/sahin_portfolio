@@ -467,7 +467,7 @@ export default function App() {
               >
                 {[
                   {
-                    href: "https://github.com/sahinmondal",
+                    href: "https://github.com/sahin5411",
                     icon: Github,
                     label: "GitHub",
                     color: "hover:text-purple-400",
@@ -476,7 +476,7 @@ export default function App() {
                     iconColor: "text-purple-400"
                   },
                   {
-                    href: "https://linkedin.com/in/sahin-mondal",
+                    href: "htttps://www.linkedin.com/in/sahin-mondal-83767b15a",
                     icon: Linkedin,
                     label: "LinkedIn",
                     color: "hover:text-blue-400",

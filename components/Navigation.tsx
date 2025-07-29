@@ -20,14 +20,14 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
 
   const socialLinks = [
     { 
-      href: 'https://github.com/sahinmondal', 
+      href: 'https://github.com/sahin5411', 
       icon: Github, 
       label: 'GitHub',
       color: 'text-blue-400',
       hoverColor: 'hover:text-blue-300'
     },
     { 
-      href: 'https://linkedin.com/in/sahin-mondal', 
+      href: 'htttps://www.linkedin.com/in/sahin-mondal-83767b15a', 
       icon: Linkedin, 
       label: 'LinkedIn',
       color: 'text-cyan-400',
