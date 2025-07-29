@@ -12,10 +12,10 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigationItems = [
-    { id: 'hero', label: 'About', icon: User, color: 'text-cyan-400', hoverColor: 'hover:text-cyan-300' },
-    { id: 'skills', label: 'Skills', icon: Code, color: 'text-blue-400', hoverColor: 'hover:text-blue-300' },
-    { id: 'projects', label: 'Projects', icon: Briefcase, color: 'text-purple-400', hoverColor: 'hover:text-purple-300' },
-    { id: 'encryption', label: 'Security', icon: Shield, color: 'text-green-400', hoverColor: 'hover:text-green-300' },
+    { id: 'hero', label: 'About', icon: User, color: 'text-blue-400', hoverColor: 'hover:text-blue-300' },
+    { id: 'skills', label: 'Skills', icon: Code, color: 'text-cyan-400', hoverColor: 'hover:text-cyan-300' },
+    { id: 'projects', label: 'Projects', icon: Briefcase, color: 'text-sky-400', hoverColor: 'hover:text-sky-300' },
+    { id: 'encryption', label: 'Security', icon: Shield, color: 'text-emerald-400', hoverColor: 'hover:text-emerald-300' },
   ];
 
   const socialLinks = [
@@ -23,29 +23,29 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
       href: 'https://github.com/sahinmondal', 
       icon: Github, 
       label: 'GitHub',
-      color: 'text-purple-400',
-      hoverColor: 'hover:text-purple-300'
+      color: 'text-blue-400',
+      hoverColor: 'hover:text-blue-300'
     },
     { 
       href: 'https://linkedin.com/in/sahin-mondal', 
       icon: Linkedin, 
       label: 'LinkedIn',
-      color: 'text-blue-400',
-      hoverColor: 'hover:text-blue-300'
+      color: 'text-cyan-400',
+      hoverColor: 'hover:text-cyan-300'
     },
     { 
       href: 'mailto:sahin.office24@gmail.com', 
       icon: Mail, 
       label: 'Email',
-      color: 'text-cyan-400',
-      hoverColor: 'hover:text-cyan-300'
+      color: 'text-sky-400',
+      hoverColor: 'hover:text-sky-300'
     },
     { 
       href: 'tel:+918617833233', 
       icon: Phone, 
       label: 'Phone',
-      color: 'text-green-400',
-      hoverColor: 'hover:text-green-300'
+      color: 'text-emerald-400',
+      hoverColor: 'hover:text-emerald-300'
     },
   ];
 
@@ -69,12 +69,12 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
       animate={{ y: 0, opacity: 1 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-black/70 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
+          ? 'bg-black/70 backdrop-blur-xl border-b border-blue-500/20 shadow-2xl shadow-blue-500/10' 
           : 'bg-black/40 backdrop-blur-lg border-b border-white/5'
       }`}
     >
       {/* Cosmic glow effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-blue-500/5 opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-cyan-500/5 opacity-50" />
       
       <div className="relative max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -98,17 +98,17 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <span className="text-white font-bold text-sm">NG</span>
+              <span className="text-white font-bold text-sm">SM</span>
               
               {/* Orbital glow */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-xl border border-cyan-400/30"
+                className="absolute inset-0 rounded-xl border border-blue-400/30"
               />
             </motion.div>
             <div className="hidden sm:block">
-              <h1 className="text-white text-lg font-semibold bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+              <h1 className="text-white text-lg font-semibold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 Sahin Aktar Mondal
               </h1>
               <p className="text-gray-400 text-xs">Angular Developer</p>
@@ -126,22 +126,16 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
                   y: -2
                 }}
                 whileTap={{ scale: 0.95 }}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 relative group ${
-                  activeSection === item.id
-                    ? `bg-${item.color.split('-')[1]}-500/20 text-${item.color.split('-')[1]}-400 border border-${item.color.split('-')[1]}-500/40 shadow-lg shadow-${item.color.split('-')[1]}-500/20`
-                    : `text-gray-300 ${item.hoverColor} hover:bg-${item.color.split('-')[1]}-500/10 hover:border hover:border-${item.color.split('-')[1]}-500/20`
-                }`}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 relative group ${activeSection === item.id ? `bg-${item.color.split('-')[1]}-500/20 text-${item.color.split('-')[1]}-400 border border-${item.color.split('-')[1]}-500/40 shadow-lg shadow-${item.color.split('-')[1]}-500/20` : `text-gray-300 ${item.hoverColor} hover:bg-${item.color.split('-')[1]}-500/10 hover:border hover:border-${item.color.split('-')[1]}-500/20`}`}
               >
-                <item.icon className={`w-4 h-4 transition-colors ${
-                  activeSection === item.id ? item.color : `group-hover:${item.color}`
-                }`} />
+                <item.icon className={`w-4 h-4 transition-colors ${activeSection === item.id ? item.color : `group-hover:${item.color}`}`} />
                 <span className="text-sm font-medium">{item.label}</span>
                 
                 {/* Active indicator */}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeIndicator"
-                    className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-${item.color.split('-')[1]}-400 rounded-full`}
+                    className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-${item.color.split('-')[1]}-400 rounded-full shadow-lg shadow-${item.color.split('-')[1]}-400/50`}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
@@ -191,10 +185,13 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
 
           {/* Mobile Menu Button */}
           <motion.button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => {
+              console.log('Mobile menu button clicked. Current state:', isMobileMenuOpen);
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="md:hidden p-2 text-gray-300 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-500/10"
+            className="md:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors rounded-lg hover:bg-blue-500/10"
           >
             <motion.div
               animate={{ rotate: isMobileMenuOpen ? 90 : 0 }}
@@ -216,7 +213,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
           className="md:hidden overflow-hidden"
         >
           <motion.div 
-            className="pt-4 pb-2 space-y-2 border-t border-cyan-500/20 mt-4"
+            className="pt-4 pb-2 space-y-2 border-t border-blue-500/20 mt-4"
             initial={{ y: -20 }}
             animate={{ y: isMobileMenuOpen ? 0 : -20 }}
             transition={{ duration: 0.3, delay: 0.1 }}
@@ -233,11 +230,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
                   x: isMobileMenuOpen ? 0 : -20 
                 }}
                 transition={{ delay: 0.1 * index }}
-                className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg transition-all duration-300 ${
-                  activeSection === item.id
-                    ? `bg-${item.color.split('-')[1]}-500/20 ${item.color} border border-${item.color.split('-')[1]}-500/40 shadow-lg shadow-${item.color.split('-')[1]}-500/20`
-                    : `text-gray-300 ${item.hoverColor} hover:bg-${item.color.split('-')[1]}-500/10 hover:border hover:border-${item.color.split('-')[1]}-500/20`
-                }`}
+                className={`flex items-center space-x-3 w-full px-4 py-3 rounded-lg transition-all duration-300 ${activeSection === item.id ? `bg-${item.color.split('-')[1]}-500/20 ${item.color} border border-${item.color.split('-')[1]}-500/40 shadow-lg shadow-${item.color.split('-')[1]}-500/20` : `text-gray-300 ${item.hoverColor} hover:bg-${item.color.split('-')[1]}-500/10 hover:border hover:border-${item.color.split('-')[1]}-500/20`}`}
               >
                 <item.icon className={`w-5 h-5 ${item.color}`} />
                 <span className="font-medium">{item.label}</span>
@@ -247,7 +240,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className={`ml-auto w-2 h-2 bg-${item.color.split('-')[1]}-400 rounded-full`}
+                    className={`ml-auto w-2 h-2 bg-${item.color.split('-')[1]}-400 rounded-full shadow-md shadow-${item.color.split('-')[1]}-400/50`}
                   />
                 )}
               </motion.button>
@@ -255,7 +248,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
             
             {/* Mobile Social Links */}
             <motion.div 
-              className="flex justify-center space-x-6 pt-4 border-t border-cyan-500/20"
+              className="flex justify-center space-x-6 pt-4 border-t border-blue-500/20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ 
                 opacity: isMobileMenuOpen ? 1 : 0,
@@ -289,7 +282,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
       
       {/* Bottom border glow */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
+        className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
         animate={{ 
           opacity: [0.3, 0.8, 0.3],
           scaleX: [0.8, 1, 0.8]

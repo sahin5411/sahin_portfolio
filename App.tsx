@@ -5,7 +5,6 @@ import HeroSection from "./components/HeroSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import SecuritySection from "./components/SecuritySection";
-import ThreeStarfield from './components/ThreeStarfield';
 import {
   ArrowUp,
   Github,
@@ -98,7 +97,7 @@ export default function App() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center overflow-hidden">
-        <ThreeStarfield />
+   
         {/* Cosmic Loading Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-blue-900/20 via-purple-900/30 to-black">
           {/* Animated Background Elements */}
