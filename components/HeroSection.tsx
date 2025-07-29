@@ -200,7 +200,7 @@ export default function HeroSection({ onLearnMore }: HeroSectionProps) {
                   variant="outline"
                   onClick={() => {
                     const link = document.createElement('a');
-                    link.href = './public/Sahin(Resume).pdf'; // Corrected path for public directory
+                    link.href = 'https://drive.google.com/file/d/1AWkDM4y41qjg4Ik-Qik2GX9Xi2-VikPd/view?usp=sharing'; // Corrected path for public directory
                     link.download = 'Sahin(Resume).pdf';
                     document.body.appendChild(link);
                     link.click();
